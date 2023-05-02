@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+# check file size in bytes
 fs1=$(du -b $1 | cut -f1)
 fs2=$(du -b $2 | cut -f1)
 
