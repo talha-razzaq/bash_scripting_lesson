@@ -1,0 +1,90 @@
+#!/bin/bash
+
+
+
+echo "Let's create soft / hard link"
+
+both() {
+    echo "1. Soft link"
+    echo "2. Hard link"
+    echo "3. Exit"
+}
+
+both
+
+soft_link() {
+    echo "Let's create a soft link"
+    read -p "Enter source path: " source_path
+    read -p "Enter the target path: " target_path
+    ln -s "$source_path" "$target_path"
+    echo "Soft link has been successfully created"
+}
+
+hard_link() {
+    echo "Let's create a hard link"
+    read -p "Enter source path: " source_path
+    read -p "Enter the target path: " target_path
+    ln "$source_path" "$target_path"
+    echo "Hard link has been successfully created"
+}
+
+read -p "Enter your choice: " choice
+
+case $choice in
+    1)
+        soft_link
+        ;;
+    2)
+        hard_link
+        ;;
+    3)
+        echo "Exiting..."
+        ;;
+    *)
+        echo "Invalid choice"
+        ;;
+esac
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
