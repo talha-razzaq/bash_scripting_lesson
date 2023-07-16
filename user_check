@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Let's  check whether user present or not
+
+read -p "Enter the user name : " username
+#echo  $( id $username )
+
+#another way to check user is present or not
+
+echo $( cat /etc/passwd |grep -i  $username )
